@@ -1,6 +1,6 @@
-for i in `find ./dev -type f`;
+for i in `find ../dev/DirtyHistoryCrawler -type f`;
     do 
-	FOUND=`cat $i | grep var`
+	FOUND=`cat $i | egrep 'var|const'`
 #	printf "FOUND\n\n$FOUND\n"
 
 	if [ "$FOUND" = "" ]
